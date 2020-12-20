@@ -1,1 +1,132 @@
 /*css*/
+
+/* defining font*/
+@font-face {
+    font-family: roboto;
+    src: url(fonts/Roboto-Regular.ttf) format("truetype");
+  }
+
+
+.josue{
+    background-color: red;
+}
+
+.summary{
+    background-color: yellow;
+    font-family: roboto;
+}
+
+
+.experience{
+    background-color: rgb(160, 28, 149);
+    font-family: roboto;
+}
+
+.education{
+    background-color: lawngreen;
+    font-family: roboto;
+}
+
+
+/* This control all sections inside "aboutMe" */
+.aboutMe {
+    background-color: blue;
+    color: white;
+    font-family: roboto;
+
+}
+
+.aboutMe li{
+    list-style-type: none;
+}
+
+
+/* This controls the sub-section "adjectives" */
+.bars__title{
+    text-align: center;
+}
+
+
+.adjectives__tittle{
+    text-align: center;
+}
+
+.aboutMe img{
+    padding-left: 25%;
+}
+
+.aboutMe p{
+    text-align: center;
+}
+
+/* This controls the sub-section "contactMe" */
+
+.contactMe{
+    justify-content: center;
+    align-items: center;
+}
+
+.contactme__tittle{
+    font-family: roboto;
+    text-align: center;
+}
+
+.contactMe p{
+    padding-left: 25%;
+}
+
+.calendar{
+    background-color: white;
+    padding-top: 59px;
+    margin-right: 3px;
+}
+
+.mailbox{
+    background-color: white;
+    padding-top: 59px;
+    margin-left: 3px;
+}
+
+
+
+
+/* This creates grids needed in the whole page */
+
+main {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 70% auto;
+    grid-template-rows: 250px 150px 400px 600px;
+}
+
+
+.josue {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 1/2;
+}
+
+.summary {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 2/3;
+}
+
+
+.experience {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 3/4;
+}
+
+.education {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 4/5;
+}
+
+.aboutMe {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row: 1/6;
+}
