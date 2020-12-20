@@ -5,32 +5,108 @@
     font-family: roboto;
     src: url(fonts/Roboto-Regular.ttf) format("truetype");
   }
+  @font-face {
+    font-family: roboto_medium;
+    src: url(fonts/Roboto-Medium.ttf) format("truetype");
+  }
 
 
 .josue{
-    background-color: red;
+    background-color:rgb(221, 208, 208);
 }
 
+/* This control top of the page "welcome" */
+.mosaic {
+    display: grid;
+    grid-template-columns: 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px auto;
+    grid-template-rows: 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px;
+}
+
+
+.mosaic__item1{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row: 1/1;
+
+}
+
+.mosaic__item1--textura{
+
+    width: 1825px; 
+    height: 255px;
+}
+
+.mosaic__item2{
+    grid-column-start: 4;
+    grid-column-end: 10;
+    grid-row: 2/10;
+
+}
+
+
+.mosaic__item2--logo{
+    border-radius: 15px;
+    width: 200px; 
+    height: 200px;
+}
+
+.mosaic__JM{
+    font-family: roboto_medium;
+    font-size: 70px;
+    font-weight: bold;
+    grid-column-start: 16;
+    grid-column-end: 39;
+    grid-row: 1/5;
+}
+
+
+/* This control Professional Summary */
 .summary{
-    background-color: yellow;
+    /*background-color: yellow;*/
     font-family: roboto;
+    font-size: 25px;
+    padding-left: 75px;
+    padding-right: 35px;
+}
+
+.summary__title{
+    color:rgb(22, 66, 165);
+    font-family: roboto_medium;
 }
 
 
 .experience{
-    background-color: rgb(160, 28, 149);
+
+    /*background-color: rgb(160, 28, 149);*/
     font-family: roboto;
+    font-size: 25px;
+    padding-left: 75px;
+    padding-right: 35px;
 }
 
+.experience__title{
+    color:rgb(22, 66, 165);
+    font-family: roboto_medium;
+}
+
+
 .education{
-    background-color: lawngreen;
+    /*background-color: lawngreen;*/
     font-family: roboto;
+    font-size: 25px;
+    padding-left: 75px;
+    padding-right: 35px;
+}
+
+.education__title{
+    color:rgb(22, 66, 165);
+    font-family: roboto_medium;
 }
 
 
 /* This control all sections inside "aboutMe" */
 .aboutMe {
-    background-color: blue;
+    background-color: rgb(1, 43, 91);
     color: white;
     font-family: roboto;
 
@@ -51,8 +127,13 @@
     text-align: center;
 }
 
-.aboutMe img{
-    padding-left: 25%;
+.aboutMe__photo{
+    margin-left: 28%;
+    margin-top: 15%;
+    border-radius: 15px;
+    width: 145px; 
+    height: 255px;
+ 
 }
 
 .aboutMe p{
@@ -96,7 +177,7 @@ main {
     height: 100vh;
     display: grid;
     grid-template-columns: 70% auto;
-    grid-template-rows: 250px 150px 400px 600px;
+    grid-template-rows: 250px 250px 800px 500px;
 }
 
 
