@@ -1,19 +1,25 @@
-/*css*/
+/*CSS*/
 
 /* defining font*/
 @font-face {
     font-family: roboto;
     src: url(fonts/Roboto-Regular.ttf) format("truetype");
   }
-  @font-face {
+@font-face {
     font-family: roboto_medium;
     src: url(fonts/Roboto-Medium.ttf) format("truetype");
   }
 
 
-.josue{
-    background-color:rgb(221, 208, 208);
+
+/* This creates grids needed in THE WHOLE PAGE */
+main {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(75, 20px);
+    grid-template-rows: 255px 255px 950px 500px;
 }
+
 
 /* This control top of the page "welcome" */
 .mosaic {
@@ -27,22 +33,18 @@
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row: 1/1;
-
 }
 
 .mosaic__item1--textura{
-
-    width: 1825px; 
-    height: 255px;
+    width: 1315px; 
+    height: 256px;
 }
 
 .mosaic__item2{
     grid-column-start: 4;
     grid-column-end: 10;
     grid-row: 2/10;
-
 }
-
 
 .mosaic__item2--logo{
     border-radius: 15px;
@@ -60,13 +62,16 @@
 }
 
 
-/* This control Professional Summary */
+/* This control the sub-section "Professional Summary" */
+.summary {
+    grid-column-start: 5;
+    grid-column-end: 55;
+    grid-row: 2/3;
+}
+
 .summary{
-    /*background-color: yellow;*/
     font-family: roboto;
     font-size: 25px;
-    padding-left: 75px;
-    padding-right: 35px;
 }
 
 .summary__title{
@@ -75,13 +80,16 @@
 }
 
 
-.experience{
+/* This control the sub-section "Experience" */
+.experience {
+    grid-column-start: 5;
+    grid-column-end: 55;
+    grid-row: 3/4;
+}
 
-    /*background-color: rgb(160, 28, 149);*/
+.experience{
     font-family: roboto;
     font-size: 25px;
-    padding-left: 75px;
-    padding-right: 35px;
 }
 
 .experience__title{
@@ -90,12 +98,17 @@
 }
 
 
+/* This control the sub-section "Education" */
+.education {
+    grid-column-start: 5;
+    grid-column-end: 45;
+    grid-row: 4/5;
+}
+
 .education{
-    /*background-color: lawngreen;*/
     font-family: roboto;
     font-size: 25px;
-    padding-left: 75px;
-    padding-right: 35px;
+
 }
 
 .education__title{
@@ -104,43 +117,96 @@
 }
 
 
-/* This control all sections inside "aboutMe" */
+
+/* This control all sections inside "ABOUTME" */
+
+.aboutMe {
+    grid-column-start: 60;
+    grid-column-end: 76;
+    grid-row: 1/5;
+}
+
+/*creates grid inside .aboutMe*/
+.aboutMe {
+    display: grid;
+    grid-template-columns: repeat(16, 20px);
+    grid-template-rows: repeat(98, 20px);
+}
+
 .aboutMe {
     background-color: rgb(1, 43, 91);
     color: white;
     font-family: roboto;
-
 }
 
 .aboutMe li{
     list-style-type: none;
 }
 
-
-/* This controls the sub-section "adjectives" */
-.bars__title{
-    text-align: center;
-}
-
-
-.adjectives__tittle{
-    text-align: center;
-}
-
+/* This controls the my photo & personal info */
 .aboutMe__photo{
-    margin-left: 28%;
-    margin-top: 15%;
+    grid-column-start: 1;
+    grid-column-end: 29;
+    grid-row: 4/55;
+    text-align: center;
+    margin-left: 79px;
     border-radius: 15px;
-    width: 145px; 
-    height: 255px;
- 
+    width: 165px; 
+    height: 295px; 
+
 }
 
 .aboutMe p{
+    grid-column-start: 1;
+    grid-column-end: 29;
+    grid-row: 20/35;
+    text-align: center;
+    font-family: roboto;
+    font-size: 20px;
+}
+
+
+/* This controls the sub-section "Experience" and bars */
+.bars{
+    grid-column-start: 1;
+    grid-column-end: 29;
+    grid-row: 35/140;
     text-align: center;
 }
 
+.bars li{
+    font-family: roboto_medium;
+    font-size: 20px;
+    margin-right: 41px;
+    padding-top: 45px;
+}
+
+/* This controls the sub-section "adjectives" */
+.adjectives{
+    grid-column-start: 2;
+    grid-column-end: 29;
+    grid-row: 60/140;
+    text-align: center;
+    
+}
+
+.adjectives__tittle{
+    display: none;
+}
+
+.adjectives li{
+    font-family: roboto_medium;
+    font-size: 20px;
+    margin-right: 54px;
+    padding-top: 45px;
+}
+
 /* This controls the sub-section "contactMe" */
+.contactMe {
+    grid-column-start: 1;
+    grid-column-end: 29;
+    grid-row: 85/140;
+}
 
 .contactMe{
     justify-content: center;
@@ -153,61 +219,23 @@
 }
 
 .contactMe p{
-    padding-left: 25%;
+    padding-left: 1px;
 }
 
 .calendar{
     background-color: white;
-    padding-top: 59px;
+    padding-top: 63px;
     margin-right: 3px;
 }
 
 .mailbox{
     background-color: white;
-    padding-top: 59px;
+    padding-top: 63px;
     margin-left: 3px;
 }
 
 
 
 
-/* This creates grids needed in the whole page */
-
-main {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 70% auto;
-    grid-template-rows: 250px 250px 800px 500px;
-}
 
 
-.josue {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row: 1/2;
-}
-
-.summary {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row: 2/3;
-}
-
-
-.experience {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row: 3/4;
-}
-
-.education {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row: 4/5;
-}
-
-.aboutMe {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row: 1/6;
-}
