@@ -573,7 +573,7 @@ main {
         color:white;
         text-align: center;
         text-decoration: none;
-        zoom: 1.1; /* all browsers*/
+        zoom: 1.15; /* all browsers*/
     }
     /* This creates grids needed in THE WHOLE PAGE */
     main {
