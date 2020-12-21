@@ -7,7 +7,7 @@
     --my_lightBlue: rgb(55, 193, 255);
   }
 
-  
+
 /* defining font */
 @font-face {
     font-family: roboto;
@@ -32,8 +32,8 @@ main {
 /* This control top of the page "welcome" */
 .mosaic {
     display: grid;
-    grid-template-columns: 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px auto;
-    grid-template-rows: 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px;
+    grid-template-columns: repeat(41, 25px);
+    grid-template-rows: repeat(10, 25px);
 }
 
 .mosaic__item1{
@@ -75,9 +75,6 @@ main {
     grid-column-start: 5;
     grid-column-end: 55;
     grid-row: 2/3;
-}
-
-.summary{
     font-family: roboto;
     font-size: 25px;
 }
@@ -93,9 +90,6 @@ main {
     grid-column-start: 5;
     grid-column-end: 55;
     grid-row: 3/4;
-}
-
-.experience{
     font-family: roboto;
     font-size: 25px;
 }
@@ -111,12 +105,8 @@ main {
     grid-column-start: 5;
     grid-column-end: 45;
     grid-row: 4/5;
-}
-
-.education{
     font-family: roboto;
     font-size: 25px;
-
 }
 
 .education__title{
@@ -248,9 +238,6 @@ main {
     grid-column-start: 1;
     grid-column-end: 29;
     grid-row: 88/140;
-}
-
-.contactMe{
     justify-content: center;
     align-items: center;
 }
@@ -270,8 +257,549 @@ main {
     margin-right: 3px;
 }
 
+
+
 .mailbox{
     background-color: white;
     padding-top: 63px;
     margin-left: 3px;
+}
+
+.contactMe img{
+    width: 75px; 
+    height: 75px; 
+}
+
+
+/* ________REACTIVE__________________ */
+ 
+
+@media (min-width: 532px) and (max-width: 834px) {
+
+    body {
+        width: 768px;
+        height: 1024px;
+        zoom: 0.53; /* all browsers*/
+    }
+/* This creates grids needed in THE WHOLE PAGE */
+    main {
+        display: grid;
+        grid-template-columns: repeat(75, 10px);
+        grid-template-rows: 128px 150px repeat(2, 175px) repeat(5, 75px);
+    }
+
+
+/* This control top of the page "welcome" */
+    .mosaic {
+        display: grid;
+        grid-template-columns: repeat(40, 10px);
+        grid-template-rows: repeat(10, 13px);
+    }
+
+    .mosaic__item1{
+        grid-column-start: 1;
+        grid-column-end: 75;
+        grid-row: 1/1;
+    }
+
+    .mosaic__item1--textura{
+        width: 750px; 
+        height: 128px;
+    }
+
+    .mosaic__item2{
+        grid-column-start: 5;
+        grid-column-end: 11;
+        grid-row: 3/10;
+    }
+
+    .mosaic__item2--logo{
+        border-radius: 8px;
+        width: 77px; 
+        height: 77px;
+    }
+
+    .mosaic__JM{
+        font-family: roboto_medium;
+        color: var(--my_navyBlue);
+        font-size: 36px;
+        font-weight: bold;
+        grid-column-start: 16;
+        grid-column-end: 45;
+        grid-row: 1/6;
+    }
+
+
+/* This control the sub-section "Professional Summary" */
+    .summary {
+        grid-column-start: 5;
+        grid-column-end: 55;
+        grid-row: 2/3;
+        font-family: roboto;
+        font-size: 15px;
+    }
+
+    .summary__title{
+        color: var(--my_specialBlue);
+        font-family: roboto_medium;
+        font-size: 20px;
+    }
+
+
+/* This control the sub-section "Experience" */
+    .experience {
+        grid-column-start: 5;
+        grid-column-end: 55;
+        grid-row: 3/4;
+        font-family: roboto;
+        font-size: 15px;
+        margin-top: 5px;
+    }
+
+    .experience__title{
+        color:var(--my_specialBlue);
+        font-family: roboto_medium;
+        font-size: 20px;
+    }
+
+
+/* This control the sub-section "Education" */
+    .education {
+        grid-column-start: 5;
+        grid-column-end: 45;
+        grid-row: 8/10;
+        font-family: roboto;
+        font-size: 15px;
+    }
+
+    .education__title{
+        color: var(--my_specialBlue);
+        font-family: roboto_medium;
+        font-size: 20px;
+    }
+
+
+
+/* This creates grid inside the whole left section */
+    .aboutMe {
+        display: grid;
+        grid-template-columns: repeat(16, 20px);
+        grid-template-rows: repeat(55, 20px);
+    }
+
+    .aboutMe {
+        grid-column-start: 56;
+        grid-column-end: 76;
+        grid-row: 2/11;
+        background-color: var(--my_navyBlue);
+        color: white;
+        font-family: roboto;
+    }
+
+
+    .aboutMe li{
+        list-style-type: none;
+    }
+
+
+/* This controls the my photo & personal info */
+    .aboutMe__photo{
+        grid-column-start: 1;
+        grid-column-end: 29;
+        grid-row: 3/55;
+        text-align: center;
+        margin-left: 43px;
+        border-radius: 7px;
+        width: 120px; 
+        height: 215px; 
+    }
+
+    .aboutMe p{
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row: 14/29;
+        text-align: center;
+        font-family: roboto;
+        font-size: 12px;
+    }
+
+
+/* This controls the sub-section "Experience" and bars */
+    .bars{
+        grid-column-start: 1;
+        grid-column-end: 29;
+        grid-row: 20/140; 
+    }
+
+    .bars__title{
+        text-align: center;
+        padding-right: 121px;
+        font-size: 15px;
+        
+    }
+
+    .bars li{
+        font-family: roboto_medium;
+        font-size: 12px;
+        margin-right: 18px;
+        padding-top: 24px;
+    }
+
+    .rectangle {
+        height: 7px;
+        width: 120px;
+        background-color: white;
+    }
+
+    .inner__Rectangle--1 {
+        height: 7px;
+        width: 110px;
+        background-color: var(--my_lightBlue);
+    }
+
+    .inner__Rectangle--2 {
+        height: 7px;
+        width: 102px;
+        background-color: var(--my_lightBlue);
+    }
+
+    .inner__Rectangle--3 {
+        height: 7px;
+        width: 90px;
+        background-color: var(--my_lightBlue);
+    }
+
+    .inner__Rectangle--4 {
+        height: 7px;
+        width: 118px;
+        background-color: var(--my_lightBlue);
+    }
+
+    .rectangle h4{
+        float: right;
+        font-size: 9px;
+    }
+
+
+/* This controls the sub-section "adjectives" */
+    .adjectives{
+        grid-column-start: 1;
+        grid-column-end: 29;
+        grid-row: 32/140;
+        text-align: center;  
+    }
+
+    .adjectives__tittle{
+        display: none;
+    }
+
+    .adjectives li{
+        font-family: roboto_medium;
+        font-size: 15px;
+        margin-right: 152px;
+        padding-top: 35px;
+    }
+
+
+/* This controls the sub-section "contactMe" */
+    .contactMe {
+        grid-column-start: 1;
+        grid-column-end: 29;
+        grid-row: 47/60;
+    }
+
+    .contactMe{
+        justify-content: center;
+        align-items: center;
+        padding-right: 112px;
+    }
+
+    .contactme__tittle{
+        font-family: roboto;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .calendar{
+        background-color: white;
+        padding-top: 43px;
+        margin-right: 3px;
+    }
+
+    .mailbox{
+        background-color: white;
+        padding-top: 43px;
+        margin-left: 3px;
+    }
+
+    .contactMe img{
+        width: 50px; 
+        height: 50px; 
+    }
+    
+
+}
+
+  @media (min-width: 201px) and (max-width: 531px) {
+    body {
+        width: 768px;
+        height: 1024px;
+        zoom: 0.53; /* all browsers*/
+    }
+/* This creates grids needed in THE WHOLE PAGE */
+    main {
+        display: grid;
+        grid-template-columns: repeat(75, 10px);
+        grid-template-rows: 128px 150px repeat(2, 175px) repeat(5, 75px);
+    }
+
+
+/* This control top of the page "welcome" */
+    .mosaic {
+        display: grid;
+        grid-template-columns: repeat(40, 10px);
+        grid-template-rows: repeat(10, 13px);
+    }
+
+    .mosaic__item1{
+        grid-column-start: 1;
+        grid-column-end: 75;
+        grid-row: 1/1;
+    }
+
+    .mosaic__item1--textura{
+        width: 750px; 
+        height: 128px;
+    }
+
+    .mosaic__item2{
+        grid-column-start: 5;
+        grid-column-end: 11;
+        grid-row: 3/10;
+    }
+
+    .mosaic__item2--logo{
+        border-radius: 8px;
+        width: 77px; 
+        height: 77px;
+    }
+
+    .mosaic__JM{
+        font-family: roboto_medium;
+        color: var(--my_navyBlue);
+        font-size: 36px;
+        font-weight: bold;
+        grid-column-start: 16;
+        grid-column-end: 45;
+        grid-row: 1/6;
+    }
+
+
+/* This control the sub-section "Professional Summary" */
+    .summary {
+        grid-column-start: 5;
+        grid-column-end: 55;
+        grid-row: 2/3;
+        font-family: roboto;
+        font-size: 15px;
+    }
+
+    .summary__title{
+        color: var(--my_specialBlue);
+        font-family: roboto_medium;
+        font-size: 20px;
+    }
+
+
+/* This control the sub-section "Experience" */
+    .experience {
+        grid-column-start: 5;
+        grid-column-end: 55;
+        grid-row: 3/4;
+        font-family: roboto;
+        font-size: 15px;
+        margin-top: 5px;
+    }
+
+    .experience__title{
+        color:var(--my_specialBlue);
+        font-family: roboto_medium;
+        font-size: 20px;
+    }
+
+
+/* This control the sub-section "Education" */
+    .education {
+        grid-column-start: 5;
+        grid-column-end: 45;
+        grid-row: 8/10;
+        font-family: roboto;
+        font-size: 15px;
+    }
+
+    .education__title{
+        color: var(--my_specialBlue);
+        font-family: roboto_medium;
+        font-size: 20px;
+    }
+
+
+
+/* This creates grid inside the whole left section */
+    .aboutMe {
+        display: grid;
+        grid-template-columns: repeat(16, 20px);
+        grid-template-rows: repeat(55, 20px);
+    }
+
+    .aboutMe {
+        grid-column-start: 56;
+        grid-column-end: 76;
+        grid-row: 2/11;
+        background-color: var(--my_navyBlue);
+        color: white;
+        font-family: roboto;
+    }
+
+
+    .aboutMe li{
+        list-style-type: none;
+    }
+
+
+/* This controls the my photo & personal info */
+    .aboutMe__photo{
+        grid-column-start: 1;
+        grid-column-end: 29;
+        grid-row: 3/55;
+        text-align: center;
+        margin-left: 43px;
+        border-radius: 7px;
+        width: 120px; 
+        height: 215px; 
+    }
+
+    .aboutMe p{
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row: 14/29;
+        text-align: center;
+        font-family: roboto;
+        font-size: 12px;
+    }
+
+
+/* This controls the sub-section "Experience" and bars */
+    .bars{
+        grid-column-start: 1;
+        grid-column-end: 29;
+        grid-row: 20/140; 
+    }
+
+    .bars__title{
+        text-align: center;
+        padding-right: 121px;
+        font-size: 15px;
+        
+    }
+
+    .bars li{
+        font-family: roboto_medium;
+        font-size: 12px;
+        margin-right: 18px;
+        padding-top: 24px;
+    }
+
+    .rectangle {
+        height: 5px;
+        width: 120px;
+        background-color: white;
+    }
+
+    .inner__Rectangle--1 {
+        height: 5px;
+        width: 110px;
+        background-color: var(--my_lightBlue);
+    }
+
+    .inner__Rectangle--2 {
+        height: 5px;
+        width: 102px;
+        background-color: var(--my_lightBlue);
+    }
+
+    .inner__Rectangle--3 {
+        height: 5px;
+        width: 90px;
+        background-color: var(--my_lightBlue);
+    }
+
+    .inner__Rectangle--4 {
+        height: 5px;
+        width: 118px;
+        background-color: var(--my_lightBlue);
+    }
+
+    .rectangle h4{
+        float: right;
+        font-size: 9px;
+    }
+
+
+/* This controls the sub-section "adjectives" */
+    .adjectives{
+        grid-column-start: 1;
+        grid-column-end: 29;
+        grid-row: 32/140;
+        text-align: center;  
+    }
+
+    .adjectives__tittle{
+        display: none;
+    }
+
+    .adjectives li{
+        font-family: roboto_medium;
+        font-size: 15px;
+        margin-right: 152px;
+        padding-top: 35px;
+    }
+
+
+/* This controls the sub-section "contactMe" */
+    .contactMe {
+        grid-column-start: 1;
+        grid-column-end: 29;
+        grid-row: 47/60;
+    }
+
+    .contactMe{
+        justify-content: center;
+        align-items: center;
+        padding-right: 112px;
+    }
+
+    .contactme__tittle{
+        font-family: roboto;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .calendar{
+        background-color: white;
+        padding-top: 43px;
+        margin-right: 3px;
+    }
+
+    .mailbox{
+        background-color: white;
+        padding-top: 43px;
+        margin-left: 3px;
+    }
+
+    .contactMe img{
+        width: 50px; 
+        height: 50px; 
+    }
+  
 }
