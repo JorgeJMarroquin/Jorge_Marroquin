@@ -69,6 +69,10 @@ main {
     grid-row: 1/5;
 }
 
+.mosaic__myPhone_image{
+    display: none;
+}
+
 
 /* This control the sub-section "Professional Summary" */
 .summary {
@@ -159,6 +163,9 @@ main {
     font-size: 20px;
 }
 
+.aboutMe__JM{
+    display: none;
+}
 
 /* This controls the sub-section "Experience" and bars */
 .bars{
@@ -211,6 +218,10 @@ main {
   .rectangle h4{
       float: right;
   }
+
+  .mobile_version{
+    display: none;
+}
 
 
 /* This controls the sub-section "adjectives" */
@@ -271,17 +282,19 @@ main {
 }
 
 
-/* ________REACTIVE__________________ */
- 
+
+/* -----------REACTIVE------------------- */
+
+/*iPad tablet version*/
 
 @media (min-width: 532px) and (max-width: 834px) {
 
     body {
         width: 768px;
         height: 1024px;
-        zoom: 0.53; /* all browsers*/
+        zoom: 1.010; /* all browsers*/
     }
-/* This creates grids needed in THE WHOLE PAGE */
+    /* This creates grids needed in THE WHOLE PAGE */
     main {
         display: grid;
         grid-template-columns: repeat(75, 10px);
@@ -289,7 +302,7 @@ main {
     }
 
 
-/* This control top of the page "welcome" */
+    /* This control top of the page "welcome" */
     .mosaic {
         display: grid;
         grid-template-columns: repeat(40, 10px);
@@ -329,8 +342,12 @@ main {
         grid-row: 1/6;
     }
 
+    .mosaic__myPhone_image{
+        display: none; 
+    }
 
-/* This control the sub-section "Professional Summary" */
+
+    /* This control the sub-section "Professional Summary" */
     .summary {
         grid-column-start: 5;
         grid-column-end: 55;
@@ -346,7 +363,7 @@ main {
     }
 
 
-/* This control the sub-section "Experience" */
+    /* This control the sub-section "Experience" */
     .experience {
         grid-column-start: 5;
         grid-column-end: 55;
@@ -363,7 +380,7 @@ main {
     }
 
 
-/* This control the sub-section "Education" */
+    /* This control the sub-section "Education" */
     .education {
         grid-column-start: 5;
         grid-column-end: 45;
@@ -379,8 +396,7 @@ main {
     }
 
 
-
-/* This creates grid inside the whole left section */
+    /* This creates grid inside the whole left section */
     .aboutMe {
         display: grid;
         grid-template-columns: repeat(16, 20px);
@@ -396,13 +412,12 @@ main {
         font-family: roboto;
     }
 
-
     .aboutMe li{
         list-style-type: none;
     }
 
 
-/* This controls the my photo & personal info */
+    /* This controls the my photo & personal info */
     .aboutMe__photo{
         grid-column-start: 1;
         grid-column-end: 29;
@@ -423,8 +438,11 @@ main {
         font-size: 12px;
     }
 
+    .aboutMe__JM{
+        display: none;
+    }
 
-/* This controls the sub-section "Experience" and bars */
+    /* This controls the sub-section "Experience" and bars */
     .bars{
         grid-column-start: 1;
         grid-column-end: 29;
@@ -480,8 +498,11 @@ main {
         font-size: 9px;
     }
 
+    .mobile_version{
+        display: none;
+    }
 
-/* This controls the sub-section "adjectives" */
+    /* This controls the sub-section "adjectives" */
     .adjectives{
         grid-column-start: 1;
         grid-column-end: 29;
@@ -501,7 +522,7 @@ main {
     }
 
 
-/* This controls the sub-section "contactMe" */
+    /* This controls the sub-section "contactMe" */
     .contactMe {
         grid-column-start: 1;
         grid-column-end: 29;
@@ -540,24 +561,32 @@ main {
 
 }
 
-  @media (min-width: 201px) and (max-width: 531px) {
+
+/* -----------REACTIVE------------------- */
+/*iPhone Smartphone Version*/
+
+@media (min-width: 201px) and (max-width: 531px) {
     body {
-        width: 768px;
+        background-color: var(--my_navyBlue);
+        width: 399px;
         height: 1024px;
-        zoom: 0.53; /* all browsers*/
+        color:white;
+        text-align: center;
+        text-decoration: none;
+        zoom: 0.59; /* all browsers*/
     }
-/* This creates grids needed in THE WHOLE PAGE */
+    /* This creates grids needed in THE WHOLE PAGE */
     main {
         display: grid;
-        grid-template-columns: repeat(75, 10px);
-        grid-template-rows: 128px 150px repeat(2, 175px) repeat(5, 75px);
+        grid-template-columns: repeat(15, 10px);
+        grid-template-rows: 128px repeat(50, 50px);
     }
 
 
-/* This control top of the page "welcome" */
+    /* This control top of the page "welcome" */
     .mosaic {
         display: grid;
-        grid-template-columns: repeat(40, 10px);
+        grid-template-columns: repeat(15, 10px);
         grid-template-rows: repeat(10, 13px);
     }
 
@@ -568,7 +597,7 @@ main {
     }
 
     .mosaic__item1--textura{
-        width: 750px; 
+        width: 399px; 
         height: 128px;
     }
 
@@ -587,19 +616,23 @@ main {
     .mosaic__JM{
         font-family: roboto_medium;
         color: var(--my_navyBlue);
-        font-size: 36px;
+        font-size: 25px;
         font-weight: bold;
         grid-column-start: 16;
         grid-column-end: 45;
-        grid-row: 1/6;
+        grid-row: 2;
+    }
+
+    .mosaic__myPhone_image{
+        display: none; 
     }
 
 
-/* This control the sub-section "Professional Summary" */
+    /* This control the sub-section "Professional Summary" */
     .summary {
-        grid-column-start: 5;
+        grid-column-start: 1;
         grid-column-end: 55;
-        grid-row: 2/3;
+        grid-row: 3;
         font-family: roboto;
         font-size: 15px;
     }
@@ -608,31 +641,42 @@ main {
         color: var(--my_specialBlue);
         font-family: roboto_medium;
         font-size: 20px;
+        color: white;
     }
 
 
-/* This control the sub-section "Experience" */
+    /* This control the sub-section "Experience" */
     .experience {
-        grid-column-start: 5;
+        grid-column-start: 1;
         grid-column-end: 55;
-        grid-row: 3/4;
+        grid-row: 7;
         font-family: roboto;
         font-size: 15px;
         margin-top: 5px;
+        margin-right: 30px;
+        text-align: center;
     }
+
+    .experience li{
+        list-style-type: none;
+    }
+    
 
     .experience__title{
         color:var(--my_specialBlue);
         font-family: roboto_medium;
         font-size: 20px;
+        color: white;
+        margin-left: 24px;
+        text-align: center;
     }
 
 
-/* This control the sub-section "Education" */
+    /* This control the sub-section "Education" */
     .education {
-        grid-column-start: 5;
+        grid-column-start: 7;
         grid-column-end: 45;
-        grid-row: 8/10;
+        grid-row: 23;
         font-family: roboto;
         font-size: 15px;
     }
@@ -641,11 +685,11 @@ main {
         color: var(--my_specialBlue);
         font-family: roboto_medium;
         font-size: 20px;
+        color:white;
     }
 
 
-
-/* This creates grid inside the whole left section */
+    /* This creates grid inside the whole left section */
     .aboutMe {
         display: grid;
         grid-template-columns: repeat(16, 20px);
@@ -653,27 +697,25 @@ main {
     }
 
     .aboutMe {
-        grid-column-start: 56;
-        grid-column-end: 76;
-        grid-row: 2/11;
+        grid-column: 5;
+        grid-row: 30;
         background-color: var(--my_navyBlue);
         color: white;
         font-family: roboto;
     }
-
 
     .aboutMe li{
         list-style-type: none;
     }
 
 
-/* This controls the my photo & personal info */
+    /* This controls the my photo & personal info */
     .aboutMe__photo{
         grid-column-start: 1;
         grid-column-end: 29;
         grid-row: 3/55;
         text-align: center;
-        margin-left: 43px;
+        margin-left: 100px;
         border-radius: 7px;
         width: 120px; 
         height: 215px; 
@@ -681,24 +723,29 @@ main {
 
     .aboutMe p{
         grid-column-start: 1;
-        grid-column-end: 11;
+        grid-column-end: 25;
         grid-row: 14/29;
         text-align: center;
         font-family: roboto;
-        font-size: 12px;
+        font-size: 14px;
+        margin-left: 10px;
     }
 
+    .aboutMe__JM{
+        display: none;
+    }
 
-/* This controls the sub-section "Experience" and bars */
+    /* This controls the sub-section "Experience" and bars */
     .bars{
         grid-column-start: 1;
-        grid-column-end: 29;
-        grid-row: 20/140; 
+        grid-column-end: 50;
+        grid-row: 20; 
     }
 
-    .bars__title{
+    .bars__title{ 
         text-align: center;
-        padding-right: 121px;
+        padding-right: 159px;
+        margin-left: 35%;
         font-size: 15px;
         
     }
@@ -706,38 +753,45 @@ main {
     .bars li{
         font-family: roboto_medium;
         font-size: 12px;
-        margin-right: 18px;
-        padding-top: 24px;
+        margin-right: 1px;
+        padding-top: 35px;
+        margin-right: 100%;
+        text-align: center;
     }
 
     .rectangle {
-        height: 5px;
-        width: 120px;
+        height: 10px;
+        width: 242px;
         background-color: white;
+        border-radius: 5px;
     }
 
     .inner__Rectangle--1 {
-        height: 5px;
-        width: 110px;
+        height: 10px;
+        width: 221px;
         background-color: var(--my_lightBlue);
+        border-radius: 5px;
     }
 
     .inner__Rectangle--2 {
-        height: 5px;
-        width: 102px;
+        height: 10px;
+        width: 207px;
         background-color: var(--my_lightBlue);
+        border-radius: 5px;
     }
 
     .inner__Rectangle--3 {
-        height: 5px;
-        width: 90px;
+        height: 10px;
+        width: 182px;
         background-color: var(--my_lightBlue);
+        border-radius: 5px;
     }
 
     .inner__Rectangle--4 {
-        height: 5px;
-        width: 118px;
+        height: 10px;
+        width: 238px;
         background-color: var(--my_lightBlue);
+        border-radius: 5px;
     }
 
     .rectangle h4{
@@ -745,12 +799,15 @@ main {
         font-size: 9px;
     }
 
+    .mobile_version{
+        display: none;
+    }
 
-/* This controls the sub-section "adjectives" */
+    /* This controls the sub-section "adjectives" */
     .adjectives{
-        grid-column-start: 1;
-        grid-column-end: 29;
-        grid-row: 32/140;
+        grid-column-start: 2;
+        grid-column-end: 50;
+        grid-row: 35;
         text-align: center;  
     }
 
@@ -761,28 +818,28 @@ main {
     .adjectives li{
         font-family: roboto_medium;
         font-size: 15px;
-        margin-right: 152px;
-        padding-top: 35px;
+
     }
 
 
-/* This controls the sub-section "contactMe" */
+    /* This controls the sub-section "contactMe" */
     .contactMe {
         grid-column-start: 1;
-        grid-column-end: 29;
-        grid-row: 47/60;
+        grid-column-end: 38;
+        grid-row: 52;
+        padding-left: 3px;
     }
 
     .contactMe{
         justify-content: center;
         align-items: center;
-        padding-right: 112px;
     }
 
     .contactme__tittle{
         font-family: roboto;
         text-align: center;
         font-size: 15px;
+        margin-left: 6px;
     }
 
     .calendar{
@@ -801,5 +858,6 @@ main {
         width: 50px; 
         height: 50px; 
     }
+    
   
 }
