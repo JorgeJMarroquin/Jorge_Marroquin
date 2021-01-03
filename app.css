@@ -25,7 +25,7 @@ main {
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(75, 20px);
-    grid-template-rows: 255px 255px 950px 500px;
+    grid-template-rows: 255px 255px 255px 305px 950px 500px;
 }
 
 
@@ -81,6 +81,7 @@ main {
     grid-row: 2/3;
     font-family: roboto;
     font-size: 25px;
+    margin-top: 19px;
 }
 
 .summary__title{
@@ -103,12 +104,31 @@ main {
     font-family: roboto_medium;
 }
 
+.experience__1{
+    margin-top: 30px;
+}
+
+.experience__2{
+    margin-top: 45px;
+}
+
+.experience__3{
+    margin-top: 45px;
+}
+
+.experience__4{
+    margin-top: 45px;
+}
+
+.experience__5{
+    margin-top: 45px;
+}
 
 /* This control the sub-section "Education" */
 .education {
     grid-column-start: 5;
     grid-column-end: 45;
-    grid-row: 4/5;
+    grid-row: 6/7;
     font-family: roboto;
     font-size: 25px;
 }
@@ -130,7 +150,7 @@ main {
 .aboutMe {
     grid-column-start: 60;
     grid-column-end: 76;
-    grid-row: 1/5;
+    grid-row: 1/7;
     background-color: var(--my_navyBlue);
     color: white;
     font-family: roboto;
@@ -160,7 +180,8 @@ main {
     grid-row: 20/35;
     text-align: center;
     font-family: roboto;
-    font-size: 20px;
+    font-size: 21px;
+    font-weight: bold;
 }
 
 .aboutMe__JM{
@@ -171,7 +192,7 @@ main {
 .bars{
     grid-column-start: 1;
     grid-column-end: 29;
-    grid-row: 35/140; 
+    grid-row: 38/140; 
 }
 
 .bars__title{
@@ -199,25 +220,32 @@ main {
 
   .inner__Rectangle--2 {
     height: 15px;
-    width: 209px;
+    width: 208.25px;
+    background-color: var(--my_lightBlue);
+  }
+
+  .inner__Rectangle--2_5 {
+    height: 15px;
+    width: 196px;
     background-color: var(--my_lightBlue);
   }
 
   .inner__Rectangle--3 {
     height: 15px;
-    width: 184px;
+    width: 171.5px;
     background-color: var(--my_lightBlue);
   }
 
   .inner__Rectangle--4 {
     height: 15px;
-    width: 241px;
+    width: 183.75px;
     background-color: var(--my_lightBlue);
   }
 
   .rectangle h4{
       float: right;
   }
+
 
   .mobile_version{
     display: none;
@@ -228,7 +256,7 @@ main {
 .adjectives{
     grid-column-start: 2;
     grid-column-end: 29;
-    grid-row: 65/140;
+    grid-row: 75/140;
     text-align: center;  
 }
 
@@ -238,9 +266,9 @@ main {
 
 .adjectives li{
     font-family: roboto_medium;
-    font-size: 20px;
+    font-size: 24px;
     margin-right: 54px;
-    padding-top: 45px;
+    padding-top: 58px;
 }
 
 
